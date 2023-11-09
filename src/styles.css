@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin-right: 0.2rem;
+}
