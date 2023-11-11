@@ -18,6 +18,20 @@ export class RandomComponent {
   }
 
   splash(): void {
+    this.word = '&#128166';
+    console.log('flush the fire out');
+  }
+
+  reset(): void {
+    this.word = 'dull';
+    setTimeout(() => {
+      this.setBackToRandom();
+    }, 5000);
+    console.log('boring');
+  }
+
+  setBackToRandom(): void {
     this.word = 'random';
+    console.log('changed back to random');
   }
 }

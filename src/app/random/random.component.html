@@ -1,7 +1,14 @@
 <p style="line-height: 20px;">This is a <span [innerHTML]="word"></span> component.</p>
 <div style="margin-bottom: 2rem;">
-    <button (click)="fire()">Fire</button>
-    <button (click)="splash()">Splash</button>
+    @if (word == 'random') {
+        <button (click)="fire()">Fire</button>
+    }
+    @else if (word == '&#128293') {
+        <button (click)="splash()">Splash</button>
+    }
+    @else {
+        <button (click)="reset()">Reset</button>
+    }
 </div>
 
 <app-name-editor></app-name-editor>
