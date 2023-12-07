@@ -1,0 +1,17 @@
+<div class="main">
+    <p>Playing around with control flow.</p>
+    <p>Click the button below:</p>
+    @if (value == 15) {
+        <button class="button" (click)="changeValue(25)" type="button">25</button>
+    } @else {
+        <button class="button" (click)="changeValue(15)" type="button">15</button>
+    }
+
+    @if (value == 15) {
+        <p>Value is 15.</p>
+    } @else if (value == 25) {
+        <p>Value is 25.</p>
+    } @else {
+        <p>Initial Value.</p>
+    }
+</div>

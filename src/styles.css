@@ -2,10 +2,53 @@
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol";
+      font-size: large;
 }
 
-button {
+.main {
+  margin: 25px 10px;
+}
+
+.results h3 {
+  margin-bottom: 4px;
+}
+
+.results p {
+  margin-top: 4px;
+}
+
+.input-field {
+  padding: 4px 5px;
+  margin-bottom: 6px;
+  margin-right: 6px;
+  font-size: 18px;
+  max-width: 150px;
+  border-radius: 6px;
+  border: solid 1px #dcdcdc
+}
+
+.button {
+  box-shadow: inset 0 1px 0 0 #ffffff;
+  background: #ffffff linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  margin-right: 0.2rem;
+  color: #666666;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  margin: 0 6px 0 0;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #ffffff;
+  outline: 0;
+}
+
+.activebutton {
+  box-shadow: inset 0 1px 0 0 #dcecfb;
+  background: #bddbfa linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+  border: 1px solid #84bbf3;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #528ecc;
 }

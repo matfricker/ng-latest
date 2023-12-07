@@ -1,13 +1,13 @@
 <p style="line-height: 20px;">This is a <span [innerHTML]="word"></span> component.</p>
 <div style="margin-bottom: 2rem;">
     @if (word == 'random') {
-        <button (click)="fire()">Fire</button>
+        <button class="button" (click)="fire()">Fire</button>
     }
     @else if (word == '&#128293') {
-        <button (click)="splash()">Splash</button>
+        <button class="button" (click)="splash()">Splash</button>
     }
     @else {
-        <button (click)="reset()">Reset</button>
+        <button class="button" (click)="reset()">Reset</button>
     }
 </div>
 
