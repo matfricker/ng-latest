@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './control-flow.component.css'
 })
 export class ControlFlowComponent {
-  value: number = 10;
+  value: number = 15;
 
   ngOnInit() {
     this.log(this.value.toString());
