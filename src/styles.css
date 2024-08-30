@@ -37,18 +37,18 @@
   color: #666666;
   font-family: Arial, sans-serif;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: normal;
   padding: 6px 24px;
   margin: 0 6px 0 0;
   text-decoration: none;
-  text-shadow: 0 1px 0 #ffffff;
+  text-shadow: none;
   outline: 0;
 }
 
 .activebutton {
-  box-shadow: inset 0 1px 0 0 #dcecfb;
-  background: #bddbfa linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
-  border: 1px solid #84bbf3;
-  color: #ffffff;
-  text-shadow: 0 1px 0 #528ecc;
+  box-shadow: none;
+  background: #683aff linear-gradient(to bottom, #683aff, #ff3683 90%);
+  border: 1px solid #ffe0ec;
+  color: #ffe5ef;
+  text-shadow: none;
 }
