@@ -14,9 +14,12 @@ export class DataFunctionsComponent {
 
   addItem(): void {
     console.log('Add item clicked...');
+
+    let count = this.listItem?.length;
+
     if (this.listItem) {
       console.log(this.listItem);
-      this.data.push(this.listItem);
+      this.data.push(`${this.listItem} (${count} chars)`);
       this.listItem = null
     }
   }
