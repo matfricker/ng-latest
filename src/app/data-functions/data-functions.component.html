@@ -15,4 +15,16 @@
             <div>There are no items.</div>
         }
     </div>
+
+    <div>
+        <button class="button" type="button" (click)="clickButton()">Display Customers</button>
+    </div>
+
+    <div class="results">
+        @for (c of customers; track c; let idx = $index) {
+            <div>{{c.firstName}} {{c.lastName}}</div>
+        } @empty {
+            <div>No customers to display.</div>
+        }
+    </div>
 </div>
