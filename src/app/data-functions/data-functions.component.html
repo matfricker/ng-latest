@@ -1,30 +1,31 @@
 <div class="main">
     <p>Let's play with some data:</p>
-    <div>
+    <div class="data-panel">
+        <h2>To do list:</h2>
         <input type="text" class="input-field" id="listItem" name="listItem" [(ngModel)]="listItem">
-        <button class="button" type="button" (click)="addItem()">Add Input</button>
+        <button class="button" type="button" (click)="addItem()">Add Item</button>
+        <div class="results">
+            <h3>Item count {{data.length}}:</h3>
+            <p>Or just populate an array for now...</p>
+
+            @for (item of data; track item; let idx = $index) {
+                <div>{{idx + 1}}: {{item}}</div>
+            } @empty {
+                <div>There are no items.</div>
+            }
+        </div>
     </div>
 
-    <div class="results">
-        <h3>Item count {{data.length}}:</h3>
-        <p>Or just populate an array for now...</p>
-
-        @for (item of data; track item; let idx = $index) {
-            <div>{{idx + 1}}: {{item}}</div>
-        } @empty {
-            <div>There are no items.</div>
+    <div class="data-panel">
+        <h2>Customers:</h2>
+        @if (isVisible) {
+            <button class="button" type="button" (click)="getCustomers()">Request Customers</button>
         }
-    </div>
 
-    <div>
-        <button class="button" type="button" (click)="clickButton()">Display Customers</button>
-    </div>
-
-    <div class="results">
-        @for (c of customers; track c; let idx = $index) {
-            <div>{{c.firstName}} {{c.lastName}}</div>
-        } @empty {
-            <div>No customers to display.</div>
-        }
+        <div class="results">
+            @for (c of customers; track c; let idx = $index) {
+                <div>{{c.firstName}} {{c.lastName}}</div>
+            }
+        </div>
     </div>
 </div>

@@ -1,0 +1,10 @@
+.data-panel {
+    margin: 10px 0;
+    padding: 20px 10px;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+}
+
+.data-panel h2 {
+    margin-top: 0;
+}

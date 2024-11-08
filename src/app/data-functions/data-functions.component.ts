@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { catchError, Observable, throwError } from 'rxjs';
 
 @Component({
   selector: 'app-data-functions',
@@ -15,10 +14,15 @@ export class DataFunctionsComponent {
   listItem: string | null = null;
 
   customers: Customer[] = [];
+  isVisible: boolean = true;
 
   constructor(
     private HttpClient: HttpClient
   ) { }
+
+  ngOnInit(): void {
+    this.isVisible = true;
+  }
 
   addItem(): void {
     console.log('Add item clicked...');
@@ -32,22 +36,13 @@ export class DataFunctionsComponent {
     }
   }
 
-  clickButton(): void {
-    this.getCustomers().subscribe((result) => this.customers = result);
-  }
-
   // move to service
-  private getCustomers(): Observable<Customer[]> {
-    return this.HttpClient.get<Customer[]>('https://api.fricker.io/customers')
-      .pipe(
-        catchError((err) => {
-          return throwError(() => Error(err as string));
-        })
-      );
+  getCustomers(): void {
+    this.HttpClient.get<Customer[]>('https://api.fricker.io/customers')
+      .subscribe((result) => this.customers = result);
 
-    // this.HttpClient.get('https://api.fricker.io/customers').subscribe((result) => {
-    //   console.log(result);
-    // });
+    // hide button
+    this.isVisible = false;
   }
 }
 
