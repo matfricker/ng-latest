@@ -1,4 +1,4 @@
 export const environment = {
-    apiUrl: 'https://api.fricker.io/customers',
+    apiUrl: 'http://localhost:5000/customers',
     production: true
 };
