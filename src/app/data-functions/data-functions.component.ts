@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../../environments/environment.development';
 
 @Component({
   selector: 'app-data-functions',
@@ -38,7 +39,8 @@ export class DataFunctionsComponent {
 
   // move to service
   getCustomers(): void {
-    this.HttpClient.get<Customer[]>('https://api.fricker.io/customers')
+    const apiUrl = environment.apiUrl;
+    this.HttpClient.get<Customer[]>(apiUrl)
       .subscribe((result) => this.customers = result);
 
     // hide button
