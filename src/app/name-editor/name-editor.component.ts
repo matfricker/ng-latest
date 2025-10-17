@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-name-editor',
-    imports: [CommonModule, ReactiveFormsModule],
+    imports: [ReactiveFormsModule],
     templateUrl: './name-editor.component.html',
     styleUrl: './name-editor.component.css'
 })
