@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { environment } from '../../environments/environment';
 
 @Component({
-  selector: 'app-data-functions',
-  standalone: true,
-  imports: [FormsModule],
-  templateUrl: './data-functions.component.html',
-  styleUrl: './data-functions.component.css'
+    selector: 'app-data-functions',
+    imports: [FormsModule],
+    templateUrl: './data-functions.component.html',
+    styleUrl: './data-functions.component.css'
 })
 export class DataFunctionsComponent {
   data: string[] = [];

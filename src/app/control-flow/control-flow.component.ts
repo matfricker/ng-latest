@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-control-flow',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './control-flow.component.html',
-  styleUrl: './control-flow.component.css'
+    selector: 'app-control-flow',
+    imports: [CommonModule],
+    templateUrl: './control-flow.component.html',
+    styleUrl: './control-flow.component.css'
 })
 export class ControlFlowComponent {
   value: number = 15;

@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { NameEditorComponent } from '../name-editor/name-editor.component';
 
 @Component({
-  selector: 'app-random',
-  standalone: true,
-  imports: [CommonModule, NameEditorComponent],
-  templateUrl: './random.component.html',
-  styleUrl: './random.component.css'
+    selector: 'app-random',
+    imports: [CommonModule, NameEditorComponent],
+    templateUrl: './random.component.html',
+    styleUrl: './random.component.css'
 })
 export class RandomComponent {
   word: string = 'random';
