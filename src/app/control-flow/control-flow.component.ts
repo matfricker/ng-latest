@@ -12,6 +12,7 @@ export class ControlFlowComponent {
 
   ngOnInit() {
     this.log(this.value.toString());
+    this.getLocation();
   }
 
   changeValue(num: number): void {
@@ -21,5 +22,18 @@ export class ControlFlowComponent {
 
   log(message: string): void {
     console.log(`Log: ${message}`);
+  }
+
+  getLocation(): void {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const { latitude, longitude } = position.coords;
+        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+      }, (error) => {
+        console.error('Message: ' + error.message);
+      });
+    } else {
+      console.error('Geolocation is not supported by this browser.');
+    }
   }
 }
