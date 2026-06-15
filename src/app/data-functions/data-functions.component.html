@@ -18,12 +18,16 @@
 
     <div class="data-panel">
         <h2>Customers:</h2>
-        @if (isVisible) {
+        @if (isVisible()) {
             <button class="button" type="button" (click)="getCustomers()">Request Customers</button>
         }
 
+        @if (hasError()) {
+            <p class="error">{{ customerError() }}</p>
+        }
+
         <div class="results">
-            @for (c of customers; track c; let idx = $index) {
+            @for (c of customers(); track c; let idx = $index) {
                 <div>{{c.firstName}} {{c.lastName}}</div>
             }
         </div>

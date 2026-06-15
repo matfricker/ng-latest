@@ -21,6 +21,11 @@
   margin-top: 4px;
 }
 
+.error {
+  color: red;
+  font-size: 16px;
+}
+
 .input-field {
   padding: 4px 5px;
   margin-bottom: 0;
