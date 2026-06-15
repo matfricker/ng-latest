@@ -17,19 +17,19 @@
     </div>
 
     <div class="data-panel">
-        <h2>Customers:</h2>
+        <h2 class="no-margin">Customers:</h2>
         @if (isVisible()) {
             <button class="button" type="button" (click)="getCustomers()">Request Customers</button>
         }
 
         @if (hasError()) {
-            <p class="error">{{ customerError() }}</p>
+            <div class="error">{{customerError()}}</div>
+        } @else {
+            <div class="results">
+                @for (c of customers(); track c; let idx = $index) {
+                    <div>{{c.firstName}} {{c.lastName}}</div>
+                }
+            </div>
         }
-
-        <div class="results">
-            @for (c of customers(); track c; let idx = $index) {
-                <div>{{c.firstName}} {{c.lastName}}</div>
-            }
-        </div>
     </div>
 </div>
