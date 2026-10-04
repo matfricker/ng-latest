@@ -35,6 +35,5 @@ run `npm i -g firebase-tools` see [docs](https://firebase.google.com/docs/cli?au
 ## [Serve locally](https://firebase.google.com/docs/cli?authuser=0#test-locally)
 run `firebase serve` or `firebase serve -p 8080 --host localhost` to specify a port.
 
-## [How to Deploy App](https://firebase.google.com/docs/cli?authuser=0#deployment)
-
-run `firebase deploy` you can also add `-m "Deployment Message"`
+## [How to Deploy App]\
+When code is commited and pushed it is handled by GitHub actions.
